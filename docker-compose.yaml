@@ -8,6 +8,8 @@ services:
     - .:/go/src/github.com/endotakuya/grpc-exsample:cached
     depends_on:
     - db
+    ports:
+    - "50051:50051"
     tty: yes
   node:
     build:
