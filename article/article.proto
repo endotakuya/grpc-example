@@ -4,6 +4,7 @@ package article;
 
 service ArticleService {
     rpc First (Empty) returns (Article) {}
+    rpc Post (Article) returns (Empty) {}
 }
 
 message Empty {}

@@ -6,8 +6,8 @@ services:
       dockerfile: ./dockerfiles/golang/Dockerfile
     volumes:
     - .:/go/src/github.com/endotakuya/grpc-exsample:cached
-#    depends_on:
-#    - db
+    depends_on:
+    - db
     tty: yes
   node:
     build:
@@ -21,17 +21,17 @@ services:
     ports:
     - "3000:3000"
     tty: yes
-#  db:
-#    image: mysql:5.7
-#    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
-#    environment:
-#      LANG: C.UTF-8
-#      MYSQL_DATABASE: grpc_example
-#      MYSQL_USER: root
-#      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
-#    ports:
-#    - "3306:3306"
-#    volumes:
-#    - data:/var/lib/mysql
+  db:
+    image: mysql:5.7
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    environment:
+      LANG: C.UTF-8
+      MYSQL_DATABASE: grpc_example
+      MYSQL_USER: root
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+    ports:
+    - "3306:3306"
+    volumes:
+    - data:/var/lib/mysql
 volumes:
   data:
