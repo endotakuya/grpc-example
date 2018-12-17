@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "express": "^4.16.4",
+    "grpc": "^1.16.1",
+    "grpc-caller": "^0.11.0"
+  }
+}
