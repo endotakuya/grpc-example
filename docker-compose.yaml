@@ -5,7 +5,7 @@ services:
       context: .
       dockerfile: ./dockerfiles/golang/Dockerfile
     volumes:
-    - .:/go/src/github.com/endotakuya/grpc-exsample:cached
+    - .:/go/src/github.com/endotakuya/grpc-example:cached
     depends_on:
     - db
     ports:

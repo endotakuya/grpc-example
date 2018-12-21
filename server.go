@@ -9,7 +9,7 @@ import (
 	"log"
 	"net"
 
-	pb "github.com/endotakuya/grpc-exsample/article"
+	pb "github.com/endotakuya/grpc-example/article"
 
 	_ "github.com/go-sql-driver/mysql"
 )

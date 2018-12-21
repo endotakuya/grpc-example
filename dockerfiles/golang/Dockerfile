@@ -13,7 +13,7 @@ RUN apt-get update && \
         g++ \
         unzip
 
-ARG SERVER_APP_PATH="/go/src/github.com/endotakuya/grpc-exsample"
+ARG SERVER_APP_PATH="/go/src/github.com/endotakuya/grpc-example"
 WORKDIR $SERVER_APP_PATH
 
 # install protof

@@ -6,7 +6,7 @@ import (
 	"log"
 	"time"
 
-	pb "github.com/endotakuya/grpc-exsample/article"
+	pb "github.com/endotakuya/grpc-example/article"
 )
 
 const (
