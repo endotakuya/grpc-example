@@ -17,10 +17,10 @@ ARG SERVER_APP_PATH="/go/src/github.com/endotakuya/grpc-example"
 WORKDIR $SERVER_APP_PATH
 
 # install protof
-RUN curl -OL https://github.com/google/protobuf/releases/download/v3.2.0/protoc-3.2.0-linux-x86_64.zip && \
-    unzip protoc-3.2.0-linux-x86_64.zip -d protoc3  && \
+RUN curl -OL https://github.com/google/protobuf/releases/download/v3.6.1/protoc-3.6.1-linux-x86_64.zip && \
+    unzip protoc-3.6.1-linux-x86_64.zip -d protoc3  && \
     mv protoc3/bin/* /usr/local/bin/  && \
-    mv protoc3/include/* /usr/local/include/
+    mv protoc3/include/**/* /usr/local/include/**/*
 
 COPY . .
 RUN go get -u \

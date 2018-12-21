@@ -6,6 +6,12 @@
 $ dcoker-compose build 
 $ dcoker-compose up
 ```
+
+## Setup Database
+
+```$xslt
+mysql> create table articles ( id int NOT NULL AUTO_INCREMENT, title varchar(255), content varchar(255), status int, PRIMARY KEY (id) );
+```
 ## Run Server
 
 ```bash
