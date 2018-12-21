@@ -10,7 +10,7 @@ $ dcoker-compose up
 
 ```bash
 $ docker-compose exec golang bash
-$ go ru server.go
+$ go run server.go
 ```
 
 ## Run Client
